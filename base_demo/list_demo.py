@@ -29,6 +29,7 @@ vec2 = [4, 3, -9]
 print([x * y for x in vec1 for y in vec2])
 print([x + y for x in vec1 for y in vec2])
 
+
 # round 精度显示，
 print([str(round(355 / 113, i)) for i in range(0, 6)])
 
