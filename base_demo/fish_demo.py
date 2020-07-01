@@ -19,33 +19,29 @@ e = (d - 1) / 5 * 4
 d = 
 """
 
-# def checkFishs(total, num):
-#     total = total / 4 * 5 + 1
-#     num -= 1
-#     if num > 0:
-#         if total % 4 == 0:
-#             return checkFishs(total, num)
-#         else:
-#             return False
-#     else:
-#         return True
-#
-#
-# fish, total = 1, 1
-# while True:
-#     total = fish
-#
-#     if checkFishs(total, 5):
-#         for _ in range(5):
-#             total = total / 4 * 5 + 1
-#         break
-#     else:
-#         fish += 1
-#
-# print("--->", fish)
-# print("--->", int(total))
 
-# print(checkFishs1(fish, 5))
+def checkFishs(total, num):
+    total = total / 4 * 5 + 1
+    num -= 1
+    if num > 0:
+        if total % 4 == 0:
+            return checkFishs(total, num)
+        else:
+            return False
+    else:
+        return int(total)
+
+
+fish, total = 1, 1
+while True:
+    total = checkFishs(fish, 5)
+    if total:
+        break
+    else:
+        fish += 1
+
+print("--->", fish)
+print("--->", total)
 
 # n = 1
 # person1 = (n-1)/5
@@ -81,4 +77,3 @@ d =
 # if __name__ == '__main__':
 #     n = int(input('请输入人数:'))
 #     print('至少捕了{0}条鱼'.format(min_fish(n)))
-
